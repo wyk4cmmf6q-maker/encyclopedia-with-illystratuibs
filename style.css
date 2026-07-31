@@ -705,3 +705,233 @@ h1 {
     border-radius: 30px;
   }
 }
+
+/* =========================
+   記事の検索・絞り込み
+========================= */
+
+.filter-section {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto 76px;
+}
+
+.filter-inner {
+  padding: 42px 30px;
+  text-align: center;
+  border-radius: 38px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7ff,
+      #f4edff,
+      #f0faee
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow: var(--shadow);
+}
+
+.filter-label {
+  margin: 0 0 10px;
+
+  color: #7b61c9;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.filter-inner h2 {
+  margin: 0 0 12px;
+
+  color: #5e47a8;
+
+  font-size: clamp(26px, 5vw, 38px);
+}
+
+.filter-description {
+  margin: 0 0 30px;
+
+  line-height: 1.8;
+
+  font-weight: 600;
+}
+
+.search-area {
+  max-width: 620px;
+
+  margin: 0 auto 30px;
+
+  text-align: left;
+}
+
+.search-area label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #475569;
+
+  font-weight: 900;
+}
+
+.search-area input {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border: 2px solid #d8e5f3;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font: inherit;
+  font-size: 16px;
+
+  outline: none;
+
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.06);
+}
+
+.search-area input:focus {
+  border-color: #a88bea;
+
+  box-shadow:
+    0 0 0 4px rgba(168, 139, 234, 0.14);
+}
+
+.filter-group {
+  margin-top: 26px;
+}
+
+.filter-title {
+  margin: 0 0 14px;
+
+  color: #475569;
+
+  font-weight: 900;
+}
+
+.filter-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 11px;
+}
+
+.filter-btn,
+.sub-filter-btn {
+  padding: 11px 17px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #536174;
+
+  font-family: inherit;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 16px rgba(15, 23, 42, 0.07);
+
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+.filter-btn:hover,
+.sub-filter-btn:hover {
+  transform: translateY(-3px);
+}
+
+.filter-btn.active {
+  background:
+    linear-gradient(
+      135deg,
+      #88c7ff,
+      #bd9cff
+    );
+
+  color: #ffffff;
+}
+
+.sub-filter-btn.active {
+  background:
+    linear-gradient(
+      135deg,
+      #9fdc9b,
+      #ffd08a
+    );
+
+  color: #344451;
+}
+
+.reset-btn {
+  margin-top: 28px;
+
+  padding: 12px 24px;
+
+  border: 2px solid #b7c5d7;
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: #536174;
+
+  font-family: inherit;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #ffffff;
+}
+
+.result-count {
+  margin: 22px 0 0;
+
+  color: #6a4bc2;
+
+  font-weight: 900;
+}
+
+/* 絞り込み対象外のカードを非表示にする */
+.image-card.is-hidden {
+  display: none;
+}
+
+/* 該当記事がないカテゴリ全体を非表示にする */
+.category-section.is-hidden {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .filter-inner {
+    padding: 32px 16px;
+
+    border-radius: 30px;
+  }
+
+  .filter-buttons {
+    justify-content: flex-start;
+  }
+
+  .filter-btn,
+  .sub-filter-btn {
+    font-size: 14px;
+  }
+}
