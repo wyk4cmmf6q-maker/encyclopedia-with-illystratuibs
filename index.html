@@ -27,7 +27,172 @@
   </header>
 
   <main>
+<section class="filter-section">
+  <div class="filter-inner">
+    <p class="filter-label">Article Search</p>
 
+    <h2>気になるテーマから探す</h2>
+
+    <p class="filter-description">
+      大きなカテゴリや細かなテーマ、キーワードから記事を探せます。
+    </p>
+
+    <div class="search-area">
+      <label for="articleSearch">キーワード検索</label>
+
+      <input
+        type="search"
+        id="articleSearch"
+        placeholder="例：睡眠、人間関係、呼吸法"
+      />
+    </div>
+
+    <div class="filter-group">
+      <p class="filter-title">大分類</p>
+
+      <div class="filter-buttons main-filter-buttons">
+        <button
+          type="button"
+          class="filter-btn active"
+          data-category="all"
+        >
+          すべて
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="basic"
+        >
+          🧠 基礎知識
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="people"
+        >
+          👥 人に関する知識
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="life"
+        >
+          ☀️ 日常生活
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="relax"
+        >
+          🪻 リラックス
+        </button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <p class="filter-title">小分類</p>
+
+      <div class="filter-buttons sub-filter-buttons">
+        <button
+          type="button"
+          class="sub-filter-btn active"
+          data-tag="all"
+        >
+          すべて
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="stress"
+        >
+          ストレス
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="body"
+        >
+          心と体
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="relationship"
+        >
+          人間関係
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="consultation"
+        >
+          相談
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="sleep"
+        >
+          睡眠
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="food"
+        >
+          食事
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="exercise"
+        >
+          運動
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="relaxation"
+        >
+          リラックス方法
+        </button>
+
+        <button
+          type="button"
+          class="sub-filter-btn"
+          data-tag="thinking"
+        >
+          考え方
+        </button>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      id="resetFilters"
+      class="reset-btn"
+    >
+      条件をリセット
+    </button>
+
+    <p id="resultCount" class="result-count">
+      28件の記事があります
+    </p>
+  </div>
+</section>
+    
   <section id="basic" class="category-section basic-section reveal">
       <div class="section-heading">
         <h2>🧠基礎知識</h2>
@@ -35,14 +200,69 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="image-card"><h3>ストレスとは何か</h3><img src="basic1.png" alt="ストレスとは何か"></div>
-        <div class="image-card"><h3>ストレスと自律神経</h3><img src="basic2.png" alt="ストレスと自律神経"></div>
-        <div class="image-card"><h3>ストレス反応</h3><img src="basic3.png" alt="ストレス反応"></div>
-        <div class="image-card"><h3>良いストレス・悪いストレス</h3><img src="basic4.png" alt="良いストレス・悪いストレス"></div>
-        <div class="image-card"><h3>心の病気との関係</h3><img src="basic5.png" alt="心の病気との関係"></div>
-        <div class="image-card"><h3>ストレスに強い人・弱い人</h3><img src="basic6.png" alt="ストレスに強い人・弱い人"></div>
-        <div class="image-card"><h3>ストレスと思考の関係</h3><img src="basic7.png" alt="ストレスと思考の関係"></div>
-      </div>
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress"
+  >
+    <h3>ストレスとは何か</h3>
+    <img src="basic1.png" alt="ストレスとは何か">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress body"
+  >
+    <h3>ストレスと自律神経</h3>
+    <img src="basic2.png" alt="ストレスと自律神経">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress body"
+  >
+    <h3>ストレス反応</h3>
+    <img src="basic3.png" alt="ストレス反応">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress thinking"
+  >
+    <h3>良いストレス・悪いストレス</h3>
+    <img src="basic4.png" alt="良いストレス・悪いストレス">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress body"
+  >
+    <h3>心の病気との関係</h3>
+    <img src="basic5.png" alt="心の病気との関係">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress thinking"
+  >
+    <h3>ストレスに強い人・弱い人</h3>
+    <img src="basic6.png" alt="ストレスに強い人・弱い人">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="basic"
+    data-tags="stress thinking"
+  >
+    <h3>ストレスと思考の関係</h3>
+    <img src="basic7.png" alt="ストレスと思考の関係">
+  </div>
+</div>
 
       <a href="#top" class="home-btn">ホームへ戻る</a>
     </section>
@@ -54,14 +274,69 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="image-card"><h3>人間関係とストレス</h3><img src="people1.png" alt="人間関係とストレス"></div>
-        <div class="image-card"><h3>家族との関係</h3><img src="people2.png" alt="家族との関係"></div>
-        <div class="image-card"><h3>友人関係</h3><img src="people3.png" alt="友人関係"></div>
-        <div class="image-card"><h3>相談することの大切さ</h3><img src="people4.png" alt="相談することの大切さ"></div>
-        <div class="image-card"><h3>チック・愛着障害</h3><img src="people5.png" alt="チック・愛着障害"></div>
-        <div class="image-card"><h3>性別によるストレス差</h3><img src="people6.png" alt="性別によるストレス差"></div>
-        <div class="image-card"><h3>性格傾向とメンタル</h3><img src="people7.png" alt="性格傾向とメンタル"></div>
-      </div>
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="relationship stress"
+  >
+    <h3>人間関係とストレス</h3>
+    <img src="people1.png" alt="人間関係とストレス">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="relationship"
+  >
+    <h3>家族との関係</h3>
+    <img src="people2.png" alt="家族との関係">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="relationship"
+  >
+    <h3>友人関係</h3>
+    <img src="people3.png" alt="友人関係">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="consultation relationship"
+  >
+    <h3>相談することの大切さ</h3>
+    <img src="people4.png" alt="相談することの大切さ">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="body relationship"
+  >
+    <h3>チック・愛着障害</h3>
+    <img src="people5.png" alt="チック・愛着障害">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="stress relationship"
+  >
+    <h3>性別によるストレス差</h3>
+    <img src="people6.png" alt="性別によるストレス差">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="people"
+    data-tags="thinking relationship"
+  >
+    <h3>性格傾向とメンタル</h3>
+    <img src="people7.png" alt="性格傾向とメンタル">
+  </div>
+</div>
 
       <a href="#top" class="home-btn">ホームへ戻る</a>
     </section>
@@ -73,14 +348,69 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="image-card"><h3>睡眠とメンタル</h3><img src="life1.png" alt="睡眠とメンタル"></div>
-        <div class="image-card"><h3>食事と心の健康</h3><img src="life2.png" alt="食事と心の健康"></div>
-        <div class="image-card"><h3>スマホ・SNSとの付き合い方</h3><img src="life3.png" alt="スマホ・SNSとの付き合い方"></div>
-        <div class="image-card"><h3>運動と自律神経</h3><img src="life4.png" alt="運動と自律神経"></div>
-        <div class="image-card"><h3>入浴・リラックス</h3><img src="life5.png" alt="入浴・リラックス"></div>
-        <div class="image-card"><h3>呼吸と姿勢</h3><img src="life6.png" alt="呼吸と姿勢"></div>
-        <div class="image-card"><h3>マインドフルネス</h3><img src="life7.png" alt="マインドフルネス"></div>
-      </div>
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="sleep body"
+  >
+    <h3>睡眠とメンタル</h3>
+    <img src="life1.png" alt="睡眠とメンタル">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="food body"
+  >
+    <h3>食事と心の健康</h3>
+    <img src="life2.png" alt="食事と心の健康">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="stress relationship"
+  >
+    <h3>スマホ・SNSとの付き合い方</h3>
+    <img src="life3.png" alt="スマホ・SNSとの付き合い方">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="exercise body"
+  >
+    <h3>運動と自律神経</h3>
+    <img src="life4.png" alt="運動と自律神経">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="relaxation body"
+  >
+    <h3>入浴・リラックス</h3>
+    <img src="life5.png" alt="入浴・リラックス">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="relaxation body"
+  >
+    <h3>呼吸と姿勢</h3>
+    <img src="life6.png" alt="呼吸と姿勢">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="life"
+    data-tags="relaxation thinking"
+  >
+    <h3>マインドフルネス</h3>
+    <img src="life7.png" alt="マインドフルネス">
+  </div>
+</div>
 
       <a href="#top" class="home-btn">ホームへ戻る</a>
     </section>
@@ -92,14 +422,69 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="image-card"><h3>ストレス対処法</h3><img src="relax1.png" alt="ストレス対処法"></div>
-        <div class="image-card"><h3>呼吸法</h3><img src="relax2.png" alt="呼吸法"></div>
-        <div class="image-card"><h3>リラクゼーション</h3><img src="relax3.png" alt="リラクゼーション"></div>
-        <div class="image-card"><h3>気分転換</h3><img src="relax4.png" alt="気分転換"></div>
-        <div class="image-card"><h3>逃げることの重要性</h3><img src="relax5.png" alt="逃げることの重要性"></div>
-        <div class="image-card"><h3>自己理解を深める</h3><img src="relax6.png" alt="自己理解を深める"></div>
-        <div class="image-card"><h3>回復後の再発予防</h3><img src="relax7.png" alt="回復後の再発予防"></div>
-      </div>
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="relaxation stress"
+  >
+    <h3>ストレス対処法</h3>
+    <img src="relax1.png" alt="ストレス対処法">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="relaxation body"
+  >
+    <h3>呼吸法</h3>
+    <img src="relax2.png" alt="呼吸法">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="relaxation body"
+  >
+    <h3>リラクゼーション</h3>
+    <img src="relax3.png" alt="リラクゼーション">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="relaxation stress"
+  >
+    <h3>気分転換</h3>
+    <img src="relax4.png" alt="気分転換">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="stress thinking"
+  >
+    <h3>逃げることの重要性</h3>
+    <img src="relax5.png" alt="逃げることの重要性">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="thinking"
+  >
+    <h3>自己理解を深める</h3>
+    <img src="relax6.png" alt="自己理解を深める">
+  </div>
+
+  <div
+    class="image-card"
+    data-category="relax"
+    data-tags="relaxation thinking"
+  >
+    <h3>回復後の再発予防</h3>
+    <img src="relax7.png" alt="回復後の再発予防">
+  </div>
+</div>
 
       <a href="#top" class="home-btn">ホームへ戻る</a>
     </section>
